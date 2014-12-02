@@ -3,7 +3,6 @@ package com.example.wificonnect;
 import java.util.List;
 import java.util.Map;
 
-import com.example.wificonnect.MainActivity.OnConnectWifi;
 
 import android.content.Context;
 import android.net.wifi.ScanResult;

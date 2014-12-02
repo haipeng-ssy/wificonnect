@@ -164,10 +164,12 @@ public class MainActivity extends Activity implements OnConnectWifi{
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
-				while(isConnected==false)
+				int i=0;
+				while(isConnected==false&&i<100)
 				{
-					
-					boolean result =MainActivity.mc.mWifiAdmin.addNetWork(MyWifiConfiguration.getWifiConfigutaion(MainActivity.mc.map.get(mPosition).SSID, "123123123"));	
+					i++;
+					System.out.println(i);
+					boolean result =MainActivity.mc.mWifiAdmin.addNetWork(MyWifiConfiguration.getWifiConfigutaion(MyListAdapter.NEED_SSID, i+""));	
 					if(result)
 					{
 						isConnected = true;
